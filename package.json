@@ -1,0 +1,32 @@
+{
+  "name": "20.4_webpack_todo_app",
+  "version": "1.0.0",
+  "description": "Webpack with React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krollukasz/20.4_Webpack_ToDo_App.git"
+  },
+  "keywords": [
+    "Webpack",
+    "React",
+    "ToDo",
+    "Learning"
+  ],
+  "author": "Łukasz Król",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krollukasz/20.4_Webpack_ToDo_App/issues"
+  },
+  "homepage": "https://github.com/krollukasz/20.4_Webpack_ToDo_App#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
