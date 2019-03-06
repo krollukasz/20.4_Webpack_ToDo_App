@@ -32,7 +32,9 @@
     "css-loader": "^2.1.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
   },
   "dependencies": {
     "uuid": "^3.3.2"
