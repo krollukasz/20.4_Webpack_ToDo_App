@@ -1,6 +1,7 @@
 import React from "react";
 import uuid from "uuid";
 import style from "./App.css";
+import Title from "../components/Title";
 
 // Stworzenie kontenera
 class App extends React.Component {
@@ -34,6 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={style.TodoApp}>
+        <Title title={this.state.title}></Title>
         Tutaj pojawią się komponenty aplikacji, yeah !
       </div>
     );
