@@ -2,6 +2,7 @@ import React from "react";
 import uuid from "uuid";
 import style from "./App.css";
 import Title from "../components/Title";
+import Todo from "../components/TodoList";
 
 // Stworzenie kontenera
 class App extends React.Component {
@@ -10,7 +11,18 @@ class App extends React.Component {
 
     // Ustawienie stanu początkowego
     this.state = {
-      data: []
+      data: [{
+        id: 1,
+        text: "Clean room"
+      },
+      {
+        id: 2,
+        text: "Wash the dishes"
+      },
+      {
+        id: 3,
+        text: "Feed my cat"
+      }]
     };
   }
 
@@ -36,7 +48,7 @@ class App extends React.Component {
     return (
       <div className={style.TodoApp}>
         <Title title={this.state.title}></Title>
-        Tutaj pojawią się komponenty aplikacji, yeah !
+        <Todo data = {this.state.data} removeTodo={this.removeTodo.bind(this)} />
       </div>
     );
   }
