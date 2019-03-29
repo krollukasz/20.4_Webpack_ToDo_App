@@ -3,6 +3,7 @@ import uuid from "uuid";
 import style from "./App.css";
 import Title from "../components/Title";
 import Todo from "../components/TodoList";
+import { hot } from "react-hot-loader";
 
 // Stworzenie kontenera
 class App extends React.Component {
@@ -54,4 +55,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default hot(module) (App);
