@@ -1,5 +1,12 @@
-.titleText {
+.titleText h1 {
   font-size: 40px;
-  color: blue;
+  color: #0574BD;
   text-transform: uppercase;
+}
+
+.titleText p {
+  color: #757575;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
 }
