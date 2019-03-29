@@ -1,4 +1,20 @@
-li {
+ul {
+  padding: 0;
   font-size: 22px;
   list-style-type: none;
+}
+
+ul li {
+  margin: 4px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul button {
+  margin: 0 15px;
+  padding: 5px;
+  color: #05588E;
+  font-weight: bold;
+  border: 1px solid #05588E;
+  border-radius: 4px;
 }
