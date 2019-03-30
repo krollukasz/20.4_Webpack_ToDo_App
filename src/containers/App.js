@@ -3,6 +3,7 @@ import uuid from "uuid";
 import style from "./App.css";
 import Title from "../components/Title";
 import Todo from "../components/TodoList";
+import TodoForm from "../components/TodoForm";
 import { hot } from "react-hot-loader";
 
 // Stworzenie kontenera
@@ -49,6 +50,7 @@ class App extends React.Component {
     return (
       <div className={style.TodoApp}>
         <Title title="ToDo App in Webpack and React" numberOfTasks={this.state.data.length}></Title>
+        <TodoForm add = {this.addTodo.bind(this)}></TodoForm>
         <Todo data = {this.state.data} remove={this.removeTodo.bind(this)} />
       </div>
     );

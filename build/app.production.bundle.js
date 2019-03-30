@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -92,7 +92,7 @@
 
 
 if (true) {
-  module.exports = __webpack_require__(16);
+  module.exports = __webpack_require__(18);
 } else {}
 
 /***/ })),
@@ -256,7 +256,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(25);
+var	fixUrls = __webpack_require__(27);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -595,7 +595,7 @@ function updateLink (link, options, obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(27);
+var content = __webpack_require__(29);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -805,7 +805,7 @@ if (true) {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(17);
+  module.exports = __webpack_require__(19);
 } else {}
 
 /***/ }),
@@ -821,8 +821,9 @@ if (true) {
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_Title__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(11);
 /* harmony import */ var _components_TodoList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
-/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
-/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_hot_loader__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_TodoForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
+/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(16);
+/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_hot_loader__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
@@ -848,6 +849,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -916,6 +918,8 @@ var App =
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Title__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], {
         title: "ToDo App in Webpack and React",
         numberOfTasks: this.state.data.length
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TodoForm__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {
+        add: this.addTodo.bind(this)
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TodoList__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
         data: this.state.data,
         remove: this.removeTodo.bind(this)
@@ -926,16 +930,16 @@ var App =
   return App;
 })(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(react_hot_loader__WEBPACK_IMPORTED_MODULE_5__["hot"])(module)(App));
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(21)(module)))
+/* harmony default export */ __webpack_exports__["a"] = (Object(react_hot_loader__WEBPACK_IMPORTED_MODULE_6__["hot"])(module)(App));
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(23)(module)))
 
 /***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var v1 = __webpack_require__(22);
+var v1 = __webpack_require__(24);
 
-var v4 = __webpack_require__(23);
+var v4 = __webpack_require__(25);
 
 var uuid = v4;
 uuid.v1 = v1;
@@ -947,7 +951,7 @@ module.exports = uuid;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(24);
+var content = __webpack_require__(26);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -992,7 +996,7 @@ var Title = function Title(props) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(26);
+var content = __webpack_require__(28);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1043,6 +1047,148 @@ var TodoList = function TodoList(props) {
 
 /***/ }),
 /* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _TodoForm_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
+/* harmony import */ var _TodoForm_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_TodoForm_css__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var TodoForm =
+/*#__PURE__*/
+(function (_React$Component) {
+  _inherits(TodoForm, _React$Component);
+
+  function TodoForm(props) {
+    var _this;
+
+    _classCallCheck(this, TodoForm);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(TodoForm).call(this, props));
+    _this.state = {
+      value: " "
+    };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(TodoForm, [{
+    key: "handleChange",
+    value: function handleChange(event) {
+      this.setState({
+        value: event.target.value
+      });
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      if (this.state.value) {
+        this.props.add(this.state.value);
+        this.state.value = '';
+      } else {
+        alert("Enter task name");
+      }
+
+      event.preventDefault();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: _TodoForm_css__WEBPACK_IMPORTED_MODULE_1___default.a.TodoForm,
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.value,
+        onChange: this.handleChange,
+        placeholder: "Add new task"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "submit"
+      }, "Add"));
+    }
+  }]);
+
+  return TodoForm;
+})(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (TodoForm); // class TodoForm extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       value: 'Please write an essay about your favorite DOM element.'
+//     };
+//     this.handleChange = this.handleChange.bind(this);
+//     this.handleSubmit = this.handleSubmit.bind(this);
+//   }
+//   handleChange(event) {
+//     this.setState({value: event.target.value});
+//   }
+//   handleSubmit(event) {
+//     alert('An essay was submitted: ' + this.state.value);
+//     event.preventDefault();
+//   }
+//   render() {
+//     return (
+//       <form onSubmit={this.handleSubmit}>
+//         <label>
+//           Essay:
+//           <textarea value={this.state.value} onChange={this.handleChange} />
+//         </label>
+//         <input type="submit" value="Submit" />
+//       </form>
+//     );
+//   }
+// }
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(30);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1051,11 +1197,11 @@ var TodoList = function TodoList(props) {
 var hasWindow = typeof window !== 'undefined';
 
 if (true) {
-  module.exports = __webpack_require__(28);
+  module.exports = __webpack_require__(31);
 } else { var jsFeaturesPresent, evalAllowed; }
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1071,7 +1217,7 @@ __webpack_require__.r(__webpack_exports__);
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_App__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], null), document.getElementById("app"));
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1488,7 +1634,7 @@ var X = {
 module.exports = Z.default || Z;
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1508,7 +1654,7 @@ module.exports = Z.default || Z;
 
 var aa = __webpack_require__(0),
     n = __webpack_require__(4),
-    r = __webpack_require__(18);
+    r = __webpack_require__(20);
 
 function ba(a, b, c, d, e, f, g, h) {
   if (!a) {
@@ -7822,18 +7968,18 @@ var Wi = {
 module.exports = Xi.default || Xi;
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(19);
+  module.exports = __webpack_require__(21);
 } else {}
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8230,10 +8376,10 @@ exports.unstable_pauseExecution = function () {};
 exports.unstable_getFirstCallbackNode = function () {
   return d;
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(20)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(22)))
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports) {
 
 var g; // This works in non-strict mode
@@ -8256,7 +8402,7 @@ try {
 module.exports = g;
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = function (originalModule) {
@@ -8286,7 +8432,7 @@ module.exports = function (originalModule) {
 };
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var rng = __webpack_require__(5);
@@ -8388,7 +8534,7 @@ function v1(options, buf, offset) {
 module.exports = v1;
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var rng = __webpack_require__(5);
@@ -8421,7 +8567,7 @@ function v4(options, buf, offset) {
 module.exports = v4;
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -8434,7 +8580,7 @@ exports.locals = {
 };
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports) {
 
 /**
@@ -8523,7 +8669,7 @@ module.exports = function (css) {
 };
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -8536,17 +8682,27 @@ exports.locals = {
 };
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
 // Module
-exports.push([module.i, "ul {\r\n  padding: 0;\r\n  font-size: 22px;\r\n  list-style-type: none;\r\n}\r\n\r\nul li {\r\n  margin: 4px auto;\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\nul button {\r\n  margin: 0 15px;\r\n  padding: 5px;\r\n  color: #05588E;\r\n  font-weight: bold;\r\n  border: 1px solid #05588E;\r\n  border-radius: 4px;\r\n}", ""]);
+exports.push([module.i, "ul {\r\n  padding: 0;\r\n  min-width: 300px;\r\n  font-size: 22px;\r\n  list-style-type: none;\r\n}\r\n\r\nul li {\r\n  margin: 4px auto;\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\nul button {\r\n  margin: 0 15px;\r\n  padding: 5px;\r\n  color: #05588E;\r\n  font-weight: bold;\r\n  border: 1px solid #05588E;\r\n  border-radius: 4px;\r\n}", ""]);
 
 
 
 /***/ }),
-/* 28 */
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// Module
+exports.push([module.i, "form input {\r\nfont-size: 18px;\r\nborder: 1px solid #0574BD;\r\nborder-radius: 3px;\r\n}\r\n\r\nform button {\r\n  margin: 0 15px;\r\n  padding: 3px 10px;\r\n  font-size: 18px;\r\n  color: #05588E;\r\n  font-weight: bold;\r\n  border: 1px solid #05588E;\r\n  border-radius: 4px;\r\n  outline: none;\r\n}", ""]);
+
+
+
+/***/ }),
+/* 31 */
 /***/ ((function(module, exports, __webpack_require__) {
 
 "use strict";
