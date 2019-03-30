@@ -1,0 +1,16 @@
+form input {
+font-size: 18px;
+border: 1px solid #0574BD;
+border-radius: 3px;
+}
+
+form button {
+  margin: 0 15px;
+  padding: 3px 10px;
+  font-size: 18px;
+  color: #05588E;
+  font-weight: bold;
+  border: 1px solid #05588E;
+  border-radius: 4px;
+  outline: none;
+}
