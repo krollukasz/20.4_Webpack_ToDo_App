@@ -2,7 +2,7 @@ import React from "react";
 import uuid from "uuid";
 import style from "./App.css";
 import Title from "../components/Title";
-import Todo from "../components/TodoList";
+import TodoList from "../components/TodoList";
 import TodoForm from "../components/TodoForm";
 import { hot } from "react-hot-loader";
 
@@ -51,7 +51,7 @@ class App extends React.Component {
       <div className={style.TodoApp}>
         <Title title="ToDo App in Webpack and React" numberOfTasks={this.state.data.length}></Title>
         <TodoForm add = {this.addTodo.bind(this)}></TodoForm>
-        <Todo data = {this.state.data} remove={this.removeTodo.bind(this)} />
+        <TodoList data = {this.state.data} remove={this.removeTodo.bind(this)} />
       </div>
     );
   }
