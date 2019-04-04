@@ -1190,7 +1190,7 @@ var TodoList_default = /*#__PURE__*/__webpack_require__.n(components_TodoList);
 
 
 var Todo_Todo = function Todo(props) {
-  (function (item) {
+  return function (item) {
     return react_default.a.createElement("li", {
       key: item.id
     }, item.text, react_default.a.createElement("button", {
@@ -1200,7 +1200,7 @@ var Todo_Todo = function Todo(props) {
       }
     }, "Delete")) // console.log(props.text)
     ;
-  });
+  };
 };
 
 /* harmony default export */ var components_Todo = (Todo_Todo); // <li key={item.id}>
@@ -1218,17 +1218,16 @@ var TodoList_TodoList = function TodoList(props) {
       key: item.id,
       text: item.text
     });
-  })); //   <li key={item.id}>
-  //     {item.text}
-  //     <button className={style.itemRemove} onClick = {() => props.remove(item.id)}>Delete</button>
-  //   </li>
-
+  }));
   return react_default.a.createElement("ul", {
     className: TodoList_default.a.TodoList
   }, items);
 };
 
-/* harmony default export */ var src_components_TodoList = __webpack_exports__["a"] = (TodoList_TodoList);
+/* harmony default export */ var src_components_TodoList = __webpack_exports__["a"] = (TodoList_TodoList); //   <li key={item.id}>
+//     {item.text}
+//     <button className={style.itemRemove} onClick = {() => props.remove(item.id)}>Delete</button>
+//   </li>
 
 /***/ }),
 /* 17 */

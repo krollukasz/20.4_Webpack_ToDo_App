@@ -1,13 +1,14 @@
 import React from "react";
 import style from "./TodoList.css";
 
-const Todo = props => {item => (
+const Todo = props => {
+  return (item => (
   <li key={item.id}>
     {item.text}
     <button className={style.itemRemove} onClick = {() => props.remove(item.id)}>Delete</button>
   </li>
   // console.log(props.text)
-)
+))
 };
 
 export default Todo;

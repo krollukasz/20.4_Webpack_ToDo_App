@@ -8,12 +8,6 @@ const TodoList = props => {
     <Todo key={item.id} text={item.text}/>
   )
 
-  //   <li key={item.id}>
-  //     {item.text}
-  //     <button className={style.itemRemove} onClick = {() => props.remove(item.id)}>Delete</button>
-  //   </li>
-
-
   return (
     <ul className={style.TodoList}>
       {items}
@@ -22,3 +16,9 @@ const TodoList = props => {
 };
 
 export default TodoList;
+
+
+//   <li key={item.id}>
+  //     {item.text}
+  //     <button className={style.itemRemove} onClick = {() => props.remove(item.id)}>Delete</button>
+  //   </li>
