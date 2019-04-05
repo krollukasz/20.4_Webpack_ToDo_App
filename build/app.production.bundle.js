@@ -820,9 +820,9 @@ if (true) {
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_Title__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(11);
-/* harmony import */ var _components_TodoList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(16);
-/* harmony import */ var _components_TodoForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(13);
-/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(15);
+/* harmony import */ var _components_TodoList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
+/* harmony import */ var _components_TodoForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
+/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(16);
 /* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_hot_loader__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1023,7 +1023,40 @@ if(false) {}
 "use strict";
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _TodoForm_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
+/* harmony import */ var _TodoList_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _TodoList_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_TodoList_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var TodoList = function TodoList(props) {
+  var items = props.data.map((function (item) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: item.id,
+      onClick: function onClick() {
+        return props.remove(item.id);
+      }
+    }, item.text, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: _TodoList_css__WEBPACK_IMPORTED_MODULE_1___default.a.itemRemove,
+      onClick: function onClick() {
+        return props.remove(item.id);
+      }
+    }, "Delete"));
+  }));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: _TodoList_css__WEBPACK_IMPORTED_MODULE_1___default.a.TodoList
+  }, items);
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (TodoList);
+
+/***/ }),
+/* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _TodoForm_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
 /* harmony import */ var _TodoForm_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_TodoForm_css__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1134,7 +1167,7 @@ var TodoForm =
 // }
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1159,7 +1192,7 @@ if(content.locals) module.exports = content.locals;
 if(false) {}
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1170,64 +1203,6 @@ var hasWindow = typeof window !== 'undefined';
 if (true) {
   module.exports = __webpack_require__(31);
 } else { var jsFeaturesPresent, evalAllowed; }
-
-/***/ }),
-/* 16 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(0);
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./src/components/TodoList.css
-var components_TodoList = __webpack_require__(3);
-var TodoList_default = /*#__PURE__*/__webpack_require__.n(components_TodoList);
-
-// CONCATENATED MODULE: ./src/components/Todo.js
-
-
-
-var Todo_Todo = function Todo(props) {
-  return function (item) {
-    return react_default.a.createElement("li", {
-      key: item.id
-    }, item.text, react_default.a.createElement("button", {
-      className: TodoList_default.a.itemRemove,
-      onClick: function onClick() {
-        return props.remove(item.id);
-      }
-    }, "Delete")) // console.log(props.text)
-    ;
-  };
-};
-
-/* harmony default export */ var components_Todo = (Todo_Todo); // <li key={item.id}>
-//   {props.text}
-//   <button className={style.itemRemove} onClick = {() => props.remove(item.id)}>Delete</button>
-// </li>
-// CONCATENATED MODULE: ./src/components/TodoList.js
-
-
-
-
-var TodoList_TodoList = function TodoList(props) {
-  var items = props.data.map((function (item) {
-    return react_default.a.createElement(components_Todo, {
-      key: item.id,
-      text: item.text
-    });
-  }));
-  return react_default.a.createElement("ul", {
-    className: TodoList_default.a.TodoList
-  }, items);
-};
-
-/* harmony default export */ var src_components_TodoList = __webpack_exports__["a"] = (TodoList_TodoList); //   <li key={item.id}>
-//     {item.text}
-//     <button className={style.itemRemove} onClick = {() => props.remove(item.id)}>Delete</button>
-//   </li>
 
 /***/ }),
 /* 17 */
