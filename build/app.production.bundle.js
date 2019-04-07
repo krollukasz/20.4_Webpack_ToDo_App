@@ -99,31 +99,6 @@ if (true) {
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-var content = __webpack_require__(29);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(3)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 /*
@@ -212,7 +187,7 @@ function toComment(sourceMap) {
 }
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -616,6 +591,31 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(29);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -965,7 +965,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(3)(content, options);
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -1010,7 +1010,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(3)(content, options);
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -1152,7 +1152,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(3)(content, options);
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -1182,7 +1182,7 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./src/components/TodoList.css
-var components_TodoList = __webpack_require__(1);
+var components_TodoList = __webpack_require__(3);
 var TodoList_default = /*#__PURE__*/__webpack_require__.n(components_TodoList);
 
 // CONCATENATED MODULE: ./src/components/Todo.js
@@ -1202,8 +1202,6 @@ var Todo_Todo = function Todo(props) {
 
 /* harmony default export */ var components_Todo = (Todo_Todo);
 // CONCATENATED MODULE: ./src/components/TodoList.js
-var _this = undefined;
-
 
 
 
@@ -1212,14 +1210,10 @@ var TodoList_TodoList = function TodoList(props) {
   var items = props.data.map((function (item) {
     return react_default.a.createElement(components_Todo, {
       key: item.id,
+      id: item.id,
       text: item.text,
-      remove: props.remove.bind(_this)
-    }, react_default.a.createElement("button", {
-      className: TodoList_default.a.itemRemove,
-      onClick: function onClick() {
-        return props.remove(props.id);
-      }
-    }, "Delete"));
+      remove: props.remove
+    });
   }));
   return react_default.a.createElement("ul", {
     className: TodoList_default.a.TodoList
@@ -8598,7 +8592,7 @@ module.exports = v4;
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // Module
 exports.push([module.i, "._2xo2biYT1s9XQmHhT2Utv5 {\r\n  background-color: #F5F5F5;\r\n  color: #222;\r\n  display: flex;\r\n  flex-direction: column;\r\n  flex-wrap: nowrap;\r\n  justify-content: center;\r\n  align-items: center;\r\n  align-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n}", ""]);
 
@@ -8700,7 +8694,7 @@ module.exports = function (css) {
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // Module
 exports.push([module.i, "._1eGB81rJBIjbIiXSAP57Fu h1 {\r\n  font-size: 40px;\r\n  color: #0574BD;\r\n  text-transform: uppercase;\r\n}\r\n\r\n._1eGB81rJBIjbIiXSAP57Fu p {\r\n  color: #757575;\r\n  font-size: 32px;\r\n  font-weight: bold;\r\n  text-align: center;\r\n}", ""]);
 
@@ -8713,7 +8707,7 @@ exports.locals = {
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // Module
 exports.push([module.i, "ul {\r\n  padding: 0;\r\n  min-width: 300px;\r\n  font-size: 22px;\r\n  list-style-type: none;\r\n}\r\n\r\nul li {\r\n  margin: 4px auto;\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\nul button {\r\n  margin: 0 15px;\r\n  padding: 5px;\r\n  color: #05588E;\r\n  font-weight: bold;\r\n  border: 1px solid #05588E;\r\n  border-radius: 4px;\r\n}", ""]);
 
@@ -8723,7 +8717,7 @@ exports.push([module.i, "ul {\r\n  padding: 0;\r\n  min-width: 300px;\r\n  font-
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // Module
 exports.push([module.i, "form input {\r\nfont-size: 18px;\r\nborder: 1px solid #0574BD;\r\nborder-radius: 3px;\r\n}\r\n\r\nform button {\r\n  margin: 0 15px;\r\n  padding: 3px 10px;\r\n  font-size: 18px;\r\n  color: #05588E;\r\n  font-weight: bold;\r\n  border: 1px solid #05588E;\r\n  border-radius: 4px;\r\n  outline: none;\r\n}", ""]);
 
